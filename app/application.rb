@@ -1,3 +1,4 @@
+require 'pry'
 class Application
 
   @@items = Item.all
@@ -15,6 +16,7 @@ class Application
     else
       resp.write("Route not found") && resp.status = 404
     end
+    binding.pry
 
     resp.finish
   end
